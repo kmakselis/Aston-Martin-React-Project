@@ -3,6 +3,7 @@ import {
   Box,
   styled,
   Typography,
+  Button,
 } from '@mui/material';
 // import CartContext from '../contexts/cart-context';
 
@@ -56,37 +57,33 @@ const HomePage = () => (
     <Background component="img" src="/dbx.jpg" />
     <ContentContainer>
       <ModelNames component="main">
-        <Typography
-          variant="h2"
-          component="h1"
-          sx={{ lineHeight: '0.8em' }}
+        <Button
+          variant="text"
+          sx={{ typography: 'h2' }}
         >
           DBX
-        </Typography>
+        </Button>
 
-        <Typography
-          variant="h2"
-          component="h1"
-          sx={{ lineHeight: '0.8em', opacity: '0.5' }}
+        <Button
+          variant="text"
+          sx={{ typography: 'h2', opacity: '0.5', lineHeight: '0.5em' }}
         >
           VANTAGE
-        </Typography>
+        </Button>
 
-        <Typography
-          variant="h2"
-          component="h1"
-          sx={{ lineHeight: '0.8em', opacity: '0.5' }}
+        <Button
+          variant="text"
+          sx={{ typography: 'h2', opacity: '0.5', lineHeight: '0.5em' }}
         >
           DB11
-        </Typography>
+        </Button>
 
-        <Typography
-          variant="h2"
-          component="h1"
-          sx={{ lineHeight: '0.8em', opacity: '0.5' }}
+        <Button
+          variant="text"
+          sx={{ typography: 'h2', opacity: '0.5', lineHeight: '0.5em' }}
         >
           DBS
-        </Typography>
+        </Button>
       </ModelNames>
 
       <ParamsContainer>
