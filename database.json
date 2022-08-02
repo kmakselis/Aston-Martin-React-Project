@@ -1,88 +1,100 @@
 {
 	"cars": [
 		{
-			"id": "E4F17235-5964-72E7-7B8D-ED382359177E",
-			"model": "Mira Randolph",
-			"engine": "a ultricies adipiscing, enim mi",
-			"gearbox": "quam",
-			"price": 191634
+			"id": "E4F17235-5964",
+			"model": "Aston Martin Vantage Coupe F1 Edition",
+			"engine": "4.0 L V8 Twin Turbo, 527 AG (387kW)",
+			"color": "Lunar White",
+			"gearbox": "Automatic",
+			"price": "190 796 €"
 		},
 		{
-			"id": "71178EEE-0754-1FC4-B171-5FEEF79B4F59",
-			"model": "Judah Mann",
-			"engine": "turpis vitae purus gravida sagittis.",
-			"gearbox": "ligula.",
-			"price": 185104
+			"id": "71178EEE-0754",
+			"model": "Aston Martin Vantage Coupe F1 Edition",
+			"engine": "4.0 L V8 Twin Turbo, 527 AG (387kW)",
+			"color": "Jet Black",
+			"gearbox": "Automatic",
+			"price": "190 456 €"
 		},
 		{
-			"id": "2DA75E93-DD46-B3BF-68B8-0F5EDE56ECC6",
-			"model": "Erin Gilmore",
-			"engine": "lectus justo eu arcu. Morbi",
-			"gearbox": "bibendum",
-			"price": 190723
+			"id": "2DA75E93-DD46",
+			"model": "Aston Martin Vantage Coupe",
+			"engine": "4.0 L V8 Twin Turbo, 503 AG (375kW)",
+			"color": "Golden Saffron",
+			"gearbox": "Automatic",
+			"price": "178 814 €"
 		},
 		{
-			"id": "628DE15E-45F1-AD4B-D903-80CBB7135DBE",
-			"model": "Erin Briggs",
-			"engine": "nulla. Integer urna. Vivamus molestie",
-			"gearbox": "gravida",
-			"price": 181501
+			"id": "628DE15E-45F1",
+			"model": "Aston Martin Vantage Coupe",
+			"engine": "4.0 L V8 Twin Turbo, 503 AG (375kW)",
+			"color": "China Gray",
+			"gearbox": "Automatic",
+			"price": "184 944 €"
 		},
 		{
-			"id": "967C4AA1-DDC6-D315-4621-1ACC4AC9C868",
-			"model": "Lars Nicholson",
-			"engine": "a, malesuada id, erat. Etiam",
-			"gearbox": "sit",
-			"price": 187784
+			"id": "967C4AA1-DDC6",
+			"model": "Aston Martin DBX",
+			"engine": "3982 cm³, 551 AG (405kW)",
+			"color": "Gold",
+			"gearbox": "Automatic",
+			"price": "239 682 €"
 		},
 		{
-			"id": "72319446-D84A-C7B1-25A4-3215D638EC2E",
-			"model": "Grace Wise",
-			"engine": "Donec tempus, lorem fringilla ornare",
-			"gearbox": "malesuada",
-			"price": 196799
+			"id": "72319446-D84A",
+			"model": "Aston Martin DBX",
+			"engine": "3982 cm³, 551 AG (405kW)",
+			"color": "Black",
+			"gearbox": "Automatic",
+			"price": "222 674 €"
 		},
 		{
-			"id": "967198E0-4B47-46E5-8C5A-ED59963D8D88",
-			"model": "Rosalyn Hoffman",
-			"engine": "faucibus ut, nulla. Cras eu",
-			"gearbox": "tellus",
-			"price": 198878
+			"id": "967198E0-4B47",
+			"model": "Aston Martin DBX707",
+			"engine": "4,0 L, 707 AG (520kW)",
+			"color": "Titanium Gray",
+			"gearbox": "Automatic",
+			"price": "267 948 €"
 		},
 		{
-			"id": "8BDBAEC8-8A7B-7CFA-9182-231BB0FC270E",
-			"model": "Cyrus Macias",
-			"engine": "bibendum fermentum metus. Aenean sed",
-			"gearbox": "mus.",
-			"price": 193920
+			"id": "8BDBAEC8-8A7B",
+			"model": "Aston Martin Vantage",
+			"engine": "3998 cm³, 510 AG (375kW)",
+			"color": "Marine Blue",
+			"gearbox": "Automatic",
+			"price": "154 750 €"
 		},
 		{
-			"id": "C4D2AC69-9C7A-4A26-961A-E56F84B42D32",
-			"model": "Fallon Kennedy",
-			"engine": "sem. Pellentesque ut ipsum ac",
-			"gearbox": "velit.",
-			"price": 185064
+			"id": "C4D2AC69-9C7A",
+			"model": "Aston Martin DBX",
+			"engine": "3982 cm³, 551 AG (405kW)",
+			"color": "Contemporary",
+			"gearbox": "Automatic",
+			"price": "227 966 €"
 		},
 		{
-			"id": "78CD8259-5174-AA66-EBBE-C90F71D2CBBB",
-			"model": "Idona Craig",
-			"engine": "iaculis odio. Nam interdum enim",
-			"gearbox": "non",
-			"price": 188470
+			"id": "78CD8259-5174",
+			"model": "Aston Martin DBX",
+			"engine": "3982 cm³, 551 AG (405kW)",
+			"color": "Contemporary Minotaur Green",
+			"gearbox": "Automatic",
+			"price": "222 644 €"
 		},
 		{
-			"id": "A1841ECE-2B73-9492-BD33-22035C7706F6",
-			"model": "Palmer Estes",
-			"engine": "bibendum fermentum metus. Aenean sed",
-			"gearbox": "pede.",
-			"price": 182348
+			"id": "A1841ECE-2B73",
+			"model": "Aston Martin DB11",
+			"engine": "3982 cm³, 510 AG (375kW)",
+			"color": "Aston Martin Racing Green",
+			"gearbox": "Automatic",
+			"price": "233 052 €"
 		},
 		{
-			"id": "0445AD21-D434-3CC2-E1D5-62AA5268AB9C",
-			"model": "Zachery Bennett",
-			"engine": "Proin eget odio. Aliquam vulputate",
-			"gearbox": "aptent",
-			"price": 193858
+			"id": "0445AD21-D434",
+			"model": "Aston Martin DB11",
+			"engine": "3982 cm³, 510 AG (375kW)",
+			"color": "Aston Martin Racing Green",
+			"gearbox": "Automatic",
+			"price": "233 052 €"
 		}
 	]
 }
