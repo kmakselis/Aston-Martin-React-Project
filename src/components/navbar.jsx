@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from 'react-router-dom';
-import CartContext from '../contexts/cart-context';
+// import CartContext from '../contexts/cart-context';
 
 const Link = styled(NavLink)(({ theme }) => ({
   display: 'flex',
@@ -34,29 +34,25 @@ const pages = [
   { text: 'Kontaktai', to: '/contacts' },
 ];
 
-const Navbar = () => {
-  const cartContext = React.useContext(CartContext);
-  console.log('Navbar, cartContextValue:', cartContext);
+const Navbar = () => (
+  // const cartContext = React.useContext(CartContext);
+  <AppBar position="fixed" style={{ background: 'transparent', boxShadow: 'none' }}>
+    <Toolbar sx={{ justifyContent: 'space-between' }}>
+      <IconButton
+        size="large"
+        edge="start"
+        color="inherit"
+        sx={{ display: { sm: 'none' } }}
+      >
+        <MenuIcon />
+      </IconButton>
 
-  return (
-    <AppBar position="fixed" style={{ background: 'transparent', boxShadow: 'none' }}>
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          sx={{ display: { sm: 'none' } }}
-        >
-          <MenuIcon />
-        </IconButton>
-
-        <Box sx={{ display: 'flex', alignSelf: 'stretch' }}>
-          {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
-        </Box>
-      </Toolbar>
-    </AppBar>
-  );
-};
+      <Box sx={{ display: 'flex', alignSelf: 'stretch' }}>
+        {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
+      </Box>
+    </Toolbar>
+  </AppBar>
+);
 
 export default Navbar;
 
