@@ -6,6 +6,7 @@ import {
   Button,
   LinearProgress,
 } from '@mui/material';
+import Countup from 'react-countup';
 // import CartContext from '../contexts/cart-context';
 
 const Background = styled(Box)({
@@ -61,7 +62,7 @@ Modeliai formuojami pagal duomenis: MIN {
   power,
   zero2Hundread
 }
-Pagal Modeli8 duomenis suformuo ti mygtukus, ir nustayti  ANT UŽVEDIMO state kintamajį "activeCarID"
+Pagal Modelių duomenis suformuo ti mygtukus, ir nustayti  ANT UŽVEDIMO state kintamajį "activeCarID"
 
 Mygtuko iteravimo kode, tikrinti ar state kintamojo "activeCarID" sutampa
 su iteruojamo mygtuko/užrašo id, jei taip papildomai stilizuoti
@@ -123,6 +124,9 @@ const HomePage = () => {
               color="secondary"
             />
           </Box>
+          <Box sx={{ color: '#fff', lineHeight: '2em' }}>
+            <Countup start={300} end={390} duration={0.4} suffix=" km/h" />
+          </Box>
           <Typography
             variant="h6"
             component="h1"
@@ -130,6 +134,16 @@ const HomePage = () => {
           >
             Galia
           </Typography>
+          <Box sx={{ width: '100%' }}>
+            <LinearProgress
+              variant="determinate"
+              value={speed}
+              color="secondary"
+            />
+          </Box>
+          <Box sx={{ color: '#fff', lineHeight: '2em' }}>
+            <Countup start={350} end={550} duration={0.4} suffix=" AG" />
+          </Box>
           <Typography
             variant="h6"
             component="h1"
@@ -137,6 +151,16 @@ const HomePage = () => {
           >
             0-100km
           </Typography>
+          <Box sx={{ width: '100%' }}>
+            <LinearProgress
+              variant="determinate"
+              value={speed}
+              color="secondary"
+            />
+          </Box>
+          <Box sx={{ color: '#fff', lineHeight: '2em' }}>
+            <Countup start={1} end={4.3} duration={0.4} suffix=" s" decimals={1} />
+          </Box>
         </ParamsContainer>
       </ContentContainer>
     </Box>
