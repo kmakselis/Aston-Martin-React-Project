@@ -2,7 +2,7 @@
 	"cars": [
 		{
 			"id": "E4F17235-5964",
-			"model": "Aston Martin Vantage Coupe F1 Edition",
+			"model": "Aston Martin Vantage F1 Edition",
 			"engine": "4,0 L V8 Twin Turbo",
 			"color": "Lunar White",
 			"gearbox": "Automatinė",
@@ -14,7 +14,7 @@
 		},
 		{
 			"id": "71178EEE-0754",
-			"model": "Aston Martin Vantage Coupe F1 Edition",
+			"model": "Aston Martin Vantage F1 Edition",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Jet Black",
 			"gearbox": "Automatinė",
@@ -26,7 +26,7 @@
 		},
 		{
 			"id": "2DA75E93-DD46",
-			"model": "Aston Martin Vantage Coupe",
+			"model": "Aston Martin Vantage",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Golden Saffron",
 			"gearbox": "Automatinė",
@@ -38,7 +38,7 @@
 		},
 		{
 			"id": "628DE15E-45F1",
-			"model": "Aston Martin Vantage Coupe",
+			"model": "Aston Martin Vantage",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "China Gray",
 			"gearbox": "Automatinė",

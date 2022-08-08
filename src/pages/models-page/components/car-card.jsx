@@ -21,14 +21,14 @@ const CarCard = ({
   img,
 }) => (
   <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-    <Box sx={{ position: 'relative', width: '100%', pt: '95%' }}>
+    <Box sx={{ position: 'relative', width: '100%', pt: '65%' }}>
       <Image src={img} sx={{ position: 'absolute', top: 0, left: 0 }} />
     </Box>
     <Box sx={{ m: 2, display: 'flex', justifyContent: 'center' }}>
-      <Typography variant="h5" component="div">{model}</Typography>
+      <Typography variant="h6" component="div">{model}</Typography>
     </Box>
     <CardContent sx={{
-      display: 'flex', justifyContent: 'center', height: '100%', p: 2, flexGrow: 1,
+      display: 'flex', justifyContent: 'center', height: '100%', flexGrow: 1,
     }}
     >
 
@@ -37,8 +37,8 @@ const CarCard = ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'left',
-        m: 2,
-        width: '35%',
+        m: 1,
+        width: '50%',
       }}
       >
         <Box sx={{ m: 1 }}>
@@ -70,8 +70,8 @@ const CarCard = ({
         flexDirection: 'column',
         justifyContent: 'left',
         alignItems: 'left',
-        m: 2,
-        width: '35%',
+        m: 1,
+        width: '50%',
       }}
       >
         <Box sx={{ fontWeight: 'bold', m: 1 }}>

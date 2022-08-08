@@ -53,6 +53,7 @@ const ModelNames = styled(Box)(({ theme }) => ({
   alignItems: 'flex-start',
   gap: theme.spacing(6),
 }));
+
 /*
 Dizainas
 
@@ -62,20 +63,53 @@ Mygtuko iteravimo kode, tikrinti ar state kintamojo "activeCarID" sutampa
 su iteruojamo mygtuko/užrašo id, jei taip papildomai stilizuoti
 
 */
-const MAX_SPEED = 400;
+const MAX_SPEED = 450;
 const speedRatio = 100 / MAX_SPEED;
+const MAX_POWER = 700;
+const powerRatio = 100 / MAX_POWER;
+const MAX_ACCELERATION = 5;
+const accelerationRatio = 100 / MAX_ACCELERATION;
 
 const HomePage = () => {
   const [speed, setSpeed] = React.useState(0);
+  const [power, setPower] = React.useState(0);
+  const [acceleration, setAcceleration] = React.useState(0);
+  const [bgImage, setbgImage] = React.useState('/dbx.jpg');
+
+  const DBXProgress = () => {
+    setSpeed(384 * speedRatio);
+    setPower(550 * powerRatio);
+    setAcceleration(4.3 * accelerationRatio);
+    setbgImage('/dbx.jpg');
+  };
+  const VantageProgress = () => {
+    setSpeed(211 * speedRatio);
+    setPower(456 * powerRatio);
+    setAcceleration(2.3 * accelerationRatio);
+    setbgImage('/vantage.jpg');
+  };
+  const DB11Progress = () => {
+    setSpeed(150 * speedRatio);
+    setPower(659 * powerRatio);
+    setAcceleration(1 * accelerationRatio);
+    setbgImage('/db11.jpg');
+  };
+  const DBSProgress = () => {
+    setSpeed(200 * speedRatio);
+    setPower(279 * powerRatio);
+    setAcceleration(4 * accelerationRatio);
+    setbgImage('/dbs.jpg');
+  };
 
   return (
     <Box sx={{ height: '100vh', position: 'relative' }}>
-      <Background component="img" src="/dbx.jpg" />
+      <Background component="img" src={bgImage} />
       <ContentContainer>
         <ModelNames component="main">
           <Button
             variant="text"
             sx={{ typography: 'h2' }}
+            onClick={() => { DBXProgress(); }}
           >
             DBX
           </Button>
@@ -83,6 +117,7 @@ const HomePage = () => {
           <Button
             variant="text"
             sx={{ typography: 'h2', opacity: '0.5', lineHeight: '0.5em' }}
+            onClick={() => { VantageProgress(); }}
           >
             VANTAGE
           </Button>
@@ -90,6 +125,7 @@ const HomePage = () => {
           <Button
             variant="text"
             sx={{ typography: 'h2', opacity: '0.5', lineHeight: '0.5em' }}
+            onClick={() => { DB11Progress(); }}
           >
             DB11
           </Button>
@@ -97,7 +133,7 @@ const HomePage = () => {
           <Button
             variant="text"
             sx={{ typography: 'h2', opacity: '0.5', lineHeight: '0.5em' }}
-            onMouseEnter={() => setSpeed(200 * speedRatio)}
+            onClick={() => { DBSProgress(); }}
           >
             DBS
           </Button>
@@ -112,7 +148,7 @@ const HomePage = () => {
             Maksimalus greitis
           </Typography>
           <Box sx={{ color: '#fff', lineHeight: '2em' }}>
-            <Countup start={290} end={390} duration={0.4} suffix=" km/h" />
+            <Countup start={0} end={speed} duration={0.4} suffix=" km/h" preserveValue />
           </Box>
           <Box sx={{ width: '100%', marginBottom: [3] }}>
             <LinearProgress
@@ -135,7 +171,7 @@ const HomePage = () => {
           <Box sx={{ width: '100%', marginBottom: [3] }}>
             <LinearProgress
               variant="determinate"
-              value={speed}
+              value={power}
               color="secondary"
             />
           </Box>
@@ -152,7 +188,7 @@ const HomePage = () => {
           <Box sx={{ width: '100%' }}>
             <LinearProgress
               variant="determinate"
-              value={speed}
+              value={acceleration}
               color="secondary"
             />
           </Box>

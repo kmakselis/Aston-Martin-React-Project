@@ -36,7 +36,7 @@ const pages = [
 
 const Navbar = () => (
   // const cartContext = React.useContext(CartContext);
-  <AppBar position="fixed" style={{ background: 'transparent', boxShadow: 'none' }}>
+  <AppBar position="fixed" style={{ background: 'black', boxShadow: 'none' }}>
     <Toolbar sx={{ justifyContent: 'space-between' }}>
       <IconButton
         size="large"
