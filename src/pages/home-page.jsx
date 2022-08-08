@@ -55,14 +55,8 @@ const ModelNames = styled(Box)(({ theme }) => ({
 }));
 /*
 Dizainas
-Modeliai formuojami pagal duomenis: MIN {
-  id
-  title
-  maxSpeed,
-  power,
-  zero2Hundread
-}
-Pagal Modelių duomenis suformuo ti mygtukus, ir nustayti  ANT UŽVEDIMO state kintamajį "activeCarID"
+
+Pagal Modelių duomenis suformuoti mygtukus, ir nustayti  ANT UŽVEDIMO state kintamajį "activeCarID"
 
 Mygtuko iteravimo kode, tikrinti ar state kintamojo "activeCarID" sutampa
 su iteruojamo mygtuko/užrašo id, jei taip papildomai stilizuoti
@@ -117,16 +111,17 @@ const HomePage = () => {
           >
             Maksimalus greitis
           </Typography>
-          <Box sx={{ width: '100%' }}>
+          <Box sx={{ color: '#fff', lineHeight: '2em' }}>
+            <Countup start={290} end={390} duration={0.4} suffix=" km/h" />
+          </Box>
+          <Box sx={{ width: '100%', marginBottom: [3] }}>
             <LinearProgress
               variant="determinate"
               value={speed}
               color="secondary"
             />
           </Box>
-          <Box sx={{ color: '#fff', lineHeight: '2em' }}>
-            <Countup start={300} end={390} duration={0.4} suffix=" km/h" />
-          </Box>
+
           <Typography
             variant="h6"
             component="h1"
@@ -134,15 +129,15 @@ const HomePage = () => {
           >
             Galia
           </Typography>
-          <Box sx={{ width: '100%' }}>
+          <Box sx={{ color: '#fff', lineHeight: '2em' }}>
+            <Countup start={350} end={550} duration={0.4} suffix=" AG" />
+          </Box>
+          <Box sx={{ width: '100%', marginBottom: [3] }}>
             <LinearProgress
               variant="determinate"
               value={speed}
               color="secondary"
             />
-          </Box>
-          <Box sx={{ color: '#fff', lineHeight: '2em' }}>
-            <Countup start={350} end={550} duration={0.4} suffix=" AG" />
           </Box>
           <Typography
             variant="h6"
@@ -151,15 +146,15 @@ const HomePage = () => {
           >
             0-100km
           </Typography>
+          <Box sx={{ color: '#fff', lineHeight: '2em' }}>
+            <Countup start={0} end={4.3} duration={0.4} suffix=" s" decimals={1} />
+          </Box>
           <Box sx={{ width: '100%' }}>
             <LinearProgress
               variant="determinate"
               value={speed}
               color="secondary"
             />
-          </Box>
-          <Box sx={{ color: '#fff', lineHeight: '2em' }}>
-            <Countup start={1} end={4.3} duration={0.4} suffix=" s" decimals={1} />
           </Box>
         </ParamsContainer>
       </ContentContainer>
