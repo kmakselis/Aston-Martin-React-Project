@@ -5,7 +5,7 @@
 			"model": "Aston Martin Vantage Coupe F1 Edition",
 			"engine": "4,0 L V8 Twin Turbo",
 			"color": "Lunar White",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "354 km/h",
 			"power": "527 AG (387kW)",
 			"zeroToHundred": "3,6 s",
@@ -17,121 +17,132 @@
 			"model": "Aston Martin Vantage Coupe F1 Edition",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Jet Black",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "354 km/h",
 			"power": "527 AG (387kW)",
 			"zeroToHundred": "3,6 s",
-			"price": "190 456 €"
+			"price": "190 456 €",
+			"img": "https://i.imgur.com/10HEpLT.jpg"
 		},
 		{
 			"id": "2DA75E93-DD46",
 			"model": "Aston Martin Vantage Coupe",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Golden Saffron",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "354 km/h",
 			"power": "527 AG (387kW)",
 			"zeroToHundred": "3,6 s",
-			"price": "178 814 €"
+			"price": "178 814 €",
+			"img": "https://i.imgur.com/ERzM1ED.jpg"
 		},
 		{
 			"id": "628DE15E-45F1",
 			"model": "Aston Martin Vantage Coupe",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "China Gray",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "354 km/h",
 			"power": "503 AG (375kW)",
 			"zeroToHundred": "3,6 s",
-			"price": "184 944 €"
+			"price": "184 944 €",
+			"img": "https://i.imgur.com/rXZefm1.jpg"
 		},
 		{
 			"id": "967C4AA1-DDC6",
 			"model": "Aston Martin DBX",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Onyx Black",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "317 km/h",
 			"power": "551 AG (405kW)",
 			"zeroToHundred": "4,5 s",
-			"price": "239 682 €"
+			"price": "239 682 €",
+			"img": "https://i.imgur.com/5xYLdpH.jpg"
 		},
 		{
 			"id": "72319446-D84A",
 			"model": "Aston Martin DBX",
 			"engine": "4.0 L V8 Twin Turbo",
-			"color": "Black",
-			"gearbox": "Automatic",
+			"color": "Minotaur Green",
+			"gearbox": "Automatinė",
 			"maxSpeed": "317 km/h",
 			"power": "551 AG (405kW)",
 			"zeroToHundred": "4,5 s",
-			"price": "222 674 €"
+			"price": "222 674 €",
+			"img": "https://i.imgur.com/s2kEGBw.jpg"
 		},
 		{
 			"id": "967198E0-4B47",
 			"model": "Aston Martin DBX707",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Titanium Gray",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "310 km/h",
 			"power": "707 AG (520kW)",
 			"zeroToHundred": "3,3 s",
-			"price": "267 948 €"
+			"price": "267 948 €",
+			"img": "https://i.imgur.com/IDc1FZF.jpg"
 		},
 		{
 			"id": "8BDBAEC8-8A7B",
 			"model": "Aston Martin Vantage",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Marine Blue",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "317 km/h",
 			"power": "510 AG (375kW)",
 			"zeroToHundred": "3,6 s",
-			"price": "154 750 €"
+			"price": "154 750 €",
+			"img": "https://i.imgur.com/2Nhxtmd.jpg"
 		},
 		{
 			"id": "C4D2AC69-9C7A",
 			"model": "Aston Martin DBX",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Contemporary",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "317 km/h",
 			"power": "551 AG (405kW)",
 			"zeroToHundred": "4,5 s",
-			"price": "227 966 €"
+			"price": "227 966 €",
+			"img": "https://i.imgur.com/6ESmkNq.jpg"
 		},
 		{
 			"id": "78CD8259-5174",
 			"model": "Aston Martin DBX",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Contemporary Minotaur Green",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "317 km/h",
 			"power": "551 AG (405kW)",
 			"zeroToHundred": "4,5 s",
-			"price": "222 644 €"
+			"price": "222 644 €",
+			"img": "https://i.imgur.com/C1P5ORC.jpg"
 		},
 		{
 			"id": "A1841ECE-2B73",
 			"model": "Aston Martin DB11",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Aston Martin Racing Green",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "317 km/h",
 			"power": "510 AG (375kW)",
 			"zeroToHundred": "4,0 s",
-			"price": "233 052 €"
+			"price": "233 052 €",
+			"img": "https://i.imgur.com/sm7xASc.jpg"
 		},
 		{
 			"id": "0445AD21-D434",
-			"model": "Aston Martin DB11",
+			"model": "Aston Martin DB11 (Special offer, year 2019)",
 			"engine": "4.0 L V8 Twin Turbo",
 			"color": "Aston Martin Racing Green",
-			"gearbox": "Automatic",
+			"gearbox": "Automatinė",
 			"maxSpeed": "317 km/h",
 			"power": "510 AG (375kW)",
 			"zeroToHundred": "4,0 s",
-			"price": "233 052 €"
+			"price": "199 999 €",
+			"img": "https://i.imgur.com/sm7xASc.jpg"
 		}
 	]
 }

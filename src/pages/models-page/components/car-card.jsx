@@ -95,13 +95,18 @@ const CarCard = ({
         <Box sx={{ fontWeight: 'bold', m: 1 }}>
           <Typography variant="subtitle" component="div">{price}</Typography>
         </Box>
-
       </Box>
-
     </CardContent>
-
     <CardActions sx={{ p: 2, alignSelf: 'center' }}>
-      <Button size="small" variant="contained">Siųsti užklausą</Button>
+      <Button
+        size="large"
+        variant="contained"
+        onClick={() => {
+          console.log('clicked');
+        }}
+      >
+        Siųsti užklausą
+      </Button>
     </CardActions>
   </Card>
 );
