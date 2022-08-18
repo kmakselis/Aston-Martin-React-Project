@@ -101,9 +101,9 @@ const CarCard = ({
       <Button
         size="large"
         variant="contained"
-        onClick={() => {
-          console.log('clicked');
-        }}
+        // onClick={() => {
+        //   console.log('clicked');
+        // }}
       >
         Siųsti užklausą
       </Button>
