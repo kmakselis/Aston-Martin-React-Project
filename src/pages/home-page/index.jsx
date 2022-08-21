@@ -7,6 +7,7 @@ import {
   LinearProgress,
 } from '@mui/material';
 import Countup from 'react-countup';
+// import { className } from '@emotion/react';
 // import CartContext from '../contexts/cart-context';
 
 const Background = styled(Box)({
@@ -71,11 +72,18 @@ const MAX_ACCELERATION = 5;
 const accelerationRatio = 100 / MAX_ACCELERATION;
 
 const HomePage = () => {
-  const [speed, setSpeed] = React.useState(317);
-  const [power, setPower] = React.useState(551);
-  const [acceleration, setAcceleration] = React.useState(4.8);
-  const [bgImage, setbgImage] = React.useState('/dbx.jpg');
+  const [speed, setSpeed] = React.useState(367);
+  const [power, setPower] = React.useState(510);
+  const [acceleration, setAcceleration] = React.useState(2.8);
+  const [bgImage, setbgImage] = React.useState('/db11.jpg');
+  // const [btnStyle, setBtnStyle] = React.useState('');
 
+  const DB11Progress = () => {
+    setSpeed(367);
+    setPower(510);
+    setAcceleration(2.8);
+    setbgImage('/db11.jpg');
+  };
   const DBXProgress = () => {
     setSpeed(317);
     setPower(442);
@@ -88,12 +96,6 @@ const HomePage = () => {
     setAcceleration(3);
     setbgImage('/vantage.jpg');
   };
-  const DB11Progress = () => {
-    setSpeed(367);
-    setPower(510);
-    setAcceleration(2.8);
-    setbgImage('/db11.jpg');
-  };
   const DBSProgress = () => {
     setSpeed(317);
     setPower(402);
@@ -102,16 +104,18 @@ const HomePage = () => {
   };
 
   return (
-    <Box sx={{ height: '100vh', position: 'relative' }}>
+    <Box>
       <Background component="img" src={bgImage} />
       <ContentContainer>
+
         <ModelNames component="main">
+
           <Button
             variant="text"
             sx={{ typography: 'h2', color: '#fff' }}
-            onClick={() => { DBXProgress(); }}
+            onClick={() => { DB11Progress(); }}
           >
-            DBX
+            DB11
           </Button>
 
           <Button
@@ -129,9 +133,9 @@ const HomePage = () => {
             sx={{
               typography: 'h2', opacity: '0.5', lineHeight: '0.5em', color: '#fff',
             }}
-            onClick={() => { DB11Progress(); }}
+            onClick={() => { DBXProgress(); }}
           >
-            DB11
+            DBX
           </Button>
 
           <Button

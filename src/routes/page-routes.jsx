@@ -9,6 +9,7 @@ import HomePage from '../pages/home-page';
 import ModelsPage from '../pages/models-page';
 import ContactsPage from '../pages/contacts-page';
 import ErrorPage from '../pages/error-page';
+import AdminPage from '../pages/admin-page';
 
 const PageRoutes = () => (
   <Routes>
@@ -16,6 +17,7 @@ const PageRoutes = () => (
       <Route index element={<HomePage />} />
       <Route path="models" element={<ModelsPage />} />
       <Route path="contacts" element={<ContactsPage />} />
+      <Route path="admin" element={<AdminPage />} />
 
       <Route path="auth/" element={<AuthLayout />}>
         <Route path="login" element={<LoginPage />} />

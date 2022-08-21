@@ -4,7 +4,13 @@ import { Box } from '@mui/material';
 import { Navbar } from '../components';
 
 const MainLayout = () => (
-  <Box sx={(theme) => ({ paddingTop: theme.mixins.navbar.height })}>
+  <Box sx={(theme) => ({
+    minHeight: `calc(100vh - ${theme.mixins.navbar.height})`,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  })}
+  >
     <Navbar />
     <Outlet />
   </Box>

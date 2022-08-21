@@ -15,6 +15,7 @@ const pages = [
   { text: 'Pagrindinis', to: '/' },
   { text: 'Modeliai', to: '/models' },
   { text: 'Kontaktai', to: '/contacts' },
+  { text: 'Admin', to: '/admin' },
 ];
 
 const expandBr = 'md';

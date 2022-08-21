@@ -59,6 +59,7 @@ const RegisterPage = () => {
   });
 
   return (
+
     <AuthForm
       title="Registracija"
       btnText="Registruotis"

@@ -40,7 +40,7 @@ export const Link = styled(NavLink, {
       color: grey[400],
 
       '&.active': {
-        boxShadow: `inset 0 -4px 0 ${common.white}`,
+        boxShadow: `inset 0 -2px 0 ${common.white}`,
         color: grey[50],
       },
 

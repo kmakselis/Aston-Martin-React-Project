@@ -34,8 +34,8 @@ export const mixinTheme = createTheme(baseTheme, {
     navbar: {
       display: 'flex',
       justifyContent: 'space-between',
-      height: '64px',
-      padding: baseTheme.spacing(0, 2),
+      height: '65px',
+      padding: baseTheme.spacing(0, 4),
     },
   },
 });
