@@ -112,7 +112,9 @@ const HomePage = () => {
 
           <Button
             variant="text"
-            sx={{ typography: 'h2', color: '#fff' }}
+            sx={{
+              typography: 'h2', opacity: '0.5', lineHeight: '0.5em', color: '#fff',
+            }}
             onClick={() => { DB11Progress(); }}
           >
             DB11

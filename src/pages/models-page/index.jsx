@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Grid, Box, Typography } from '@mui/material';
-import { CarCard } from './components';
+import { CarCard, Filters } from './components';
+
+const drawerWidth = 280;
 
 const ModelsPage = () => {
   const [cars, setCars] = React.useState([]);
@@ -26,7 +28,10 @@ const ModelsPage = () => {
           Specialūs pasiūlymai
         </Typography>
       </Box>
-      <Grid container spacing={2} sx={{ py: 10, px: 2 }}>
+
+      <Filters />
+
+      <Grid container spacing={2} sx={{ py: 10, px: 2, pl: { xl: `${drawerWidth}px` } }}>
         {cars.map(({
           id,
           model,
@@ -39,7 +44,7 @@ const ModelsPage = () => {
           price,
           img,
         }) => (
-          <Grid key={id} item xs={12} sm={12} md={6} lg={4} xl={3}>
+          <Grid key={id} item xs={12} sm={12} md={6} lg={4} xl={4}>
             <CarCard
               id={id}
               model={model}
