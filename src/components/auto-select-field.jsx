@@ -20,7 +20,7 @@ const AutoSelectField = ({
       id,
     }) => (
       <TextField
-        label="Kategorija"
+        label="Spalvos"
         InputLabelProps={InputLabelProps}
         InputProps={InputProps}
         fullWidth={fullWidth}

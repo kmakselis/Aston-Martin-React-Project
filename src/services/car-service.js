@@ -1,6 +1,6 @@
-const serverAddress = 'http://localhost:8080';
+const domain = process.env.REACT_APP_SERVER_ADDRESS;
 
-const formatCar = ({
+const formatCarOffer = ({
   id,
   model,
   engine,
@@ -28,15 +28,15 @@ const formatCar = ({
   categoryId,
 });
 
-const fetchAll = async () => {
-  const response = await fetch(`${serverAddress}/cars?_expand=category`);
+const fetchAllCars = async () => {
+  const response = await fetch(`${domain}/cars?_expand=category`);
   const cars = await response.json();
 
-  return cars.map(formatCar);
+  return cars.map(formatCarOffer);
 };
 
-const create = async (carProps) => {
-  const response = await fetch(`${serverAddress}/cars`, {
+const createCarOffer = async (carProps) => {
+  const response = await fetch(`${domain}/cars`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -49,8 +49,8 @@ const create = async (carProps) => {
   return car;
 };
 
-const update = async (id, cupProps) => {
-  const response = await fetch(`${serverAddress}/cars/${id}`, {
+const updateCarOffer = async (id, cupProps) => {
+  const response = await fetch(`${domain}/cars/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -63,27 +63,27 @@ const update = async (id, cupProps) => {
   return cup;
 };
 
-const remove = async (id) => {
-  await fetch(`${serverAddress}/cars/${id}`, {
+const removeCarOffer = async (id) => {
+  await fetch(`${domain}/cars/${id}`, {
     method: 'DELETE',
   });
 
   return true;
 };
 
-const fetchCategories = async () => {
-  const response = await fetch(`${serverAddress}/categories`);
+const fetchCarCategories = async () => {
+  const response = await fetch(`${domain}/categories`);
   const categories = await response.json();
 
   return categories;
 };
 
 const CarService = {
-  fetchAll,
-  create,
-  update,
-  remove,
-  fetchCategories,
+  fetchAll: fetchAllCars,
+  create: createCarOffer,
+  update: updateCarOffer,
+  remove: removeCarOffer,
+  fetchCategories: fetchCarCategories,
 };
 
 export default CarService;

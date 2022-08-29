@@ -4,7 +4,7 @@ import {
   Grid,
   Modal,
 } from '@mui/material';
-import CarService from './services/car-service';
+import CarService from '../../services/car-service';
 import { CarCard, Header, CarForm } from './components';
 
 const AdminPage = () => {
