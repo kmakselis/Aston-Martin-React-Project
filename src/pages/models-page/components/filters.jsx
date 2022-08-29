@@ -1,16 +1,11 @@
 import React from 'react';
+import { Divider } from '@mui/material';
 import {
-  Box,
-  Button,
-  Divider,
-  Drawer,
-  Typography,
-  useMediaQuery,
-} from '@mui/material';
-import TuneIcon from '@mui/icons-material/Tune';
-import AutoSelectField from '../../../components/navbar/auto-select';
-import RangeField from '../../../components/range-field';
-import CheckboxGroupField from '../../../components/checkbox-group-field';
+  AutoSelectField,
+  RangeField,
+  CheckboxGroupField,
+} from '../../../components';
+import FilterDrawer from './filter-drawer';
 
 const drawerWidth = 280;
 const MIN = 154750;
@@ -43,80 +38,47 @@ const engines = [
 ];
 
 const Filters = () => {
-  const isExtraLarge = useMediaQuery((theme) => theme.breakpoints.up('xl'));
-  const [drawerOpen, setDrawerOpen] = React.useState(false);
   const [priceRange, setPriceRange] = React.useState([MIN, MAX]);
   const [selectedModel, setSelectedModels] = React.useState([]);
   const [selectedColors, setSelectedColors] = React.useState([]);
   const [selectedEngine, setSelectedEngine] = React.useState([]);
 
   return (
-    <>
-      <Button
-        color="primary"
-        variant="contained"
-        sx={{
-          position: 'fixed',
-          bottom: 25,
-          right: 25,
-          zIndex: 5,
-          height: 64,
-          width: 64,
-          borderRadius: '10%',
-          display: { xl: 'none', xxl: 'none' },
-        }}
-        onClick={() => setDrawerOpen(!drawerOpen)}
-      >
-        <TuneIcon sx={{ color: 'common.white', fontSize: '2rem' }} />
-      </Button>
+    <FilterDrawer drawerWidth={drawerWidth}>
+      <RangeField
+        label="Kaina"
+        value={priceRange}
+        onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
+        min={MIN}
+        max={MAX}
+      />
 
-      <Drawer
-        anchor="left"
-        variant={isExtraLarge ? 'persistent' : 'temporary'}
-        open={isExtraLarge || drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-      >
-        <Box sx={(theme) => ({ width: drawerWidth, p: 2, mt: theme.mixins.navbar.height })}>
-          <Typography variant="h4">Filtrai</Typography>
+      <Divider sx={{ my: 2 }} />
 
-          <Divider sx={{ my: 2 }} />
+      <CheckboxGroupField
+        label="Modeliai"
+        options={models}
+        value={selectedModel}
+        onChange={(_, newMaterialTypes) => setSelectedModels(newMaterialTypes)}
+      />
 
-          <RangeField
-            label="Kaina"
-            value={priceRange}
-            onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
-            min={MIN}
-            max={MAX}
-          />
+      <Divider sx={{ my: 2 }} />
 
-          <Divider sx={{ my: 2 }} />
+      <CheckboxGroupField
+        label="Variklis"
+        options={engines}
+        value={selectedEngine}
+        onChange={(_, newEngine) => setSelectedEngine(newEngine)}
+      />
 
-          <CheckboxGroupField
-            label="Modeliai"
-            options={models}
-            value={selectedModel}
-            onChange={(_, newMaterialTypes) => setSelectedModels(newMaterialTypes)}
-          />
+      <Divider sx={{ my: 2 }} />
 
-          <Divider sx={{ my: 2 }} />
-
-          <CheckboxGroupField
-            label="Variklis"
-            options={engines}
-            value={selectedEngine}
-            onChange={(_, newEngine) => setSelectedEngine(newEngine)}
-          />
-
-          <Divider sx={{ my: 2 }} />
-
-          <AutoSelectField
-            options={colors}
-            value={selectedColors}
-            onChange={(_, newColor) => setSelectedColors(newColor)}
-          />
-        </Box>
-      </Drawer>
-    </>
+      <AutoSelectField
+        options={colors}
+        value={selectedColors}
+        onChange={(_, newColor) => setSelectedColors(newColor)}
+      />
+    </FilterDrawer>
   );
 };
 
