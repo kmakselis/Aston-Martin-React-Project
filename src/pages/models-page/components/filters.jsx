@@ -1,14 +1,16 @@
 import React from 'react';
 import {
   Box,
+  Button,
   Divider,
   Drawer,
   Typography,
   useMediaQuery,
 } from '@mui/material';
+import TuneIcon from '@mui/icons-material/Tune';
 import AutoSelectField from '../../../components/navbar/auto-select';
-import CheckboxGroup from '../../../components/checkbox-group';
 import RangeField from '../../../components/range-field';
+import CheckboxGroupField from '../../../components/checkbox-group-field';
 
 const drawerWidth = 280;
 const MIN = 154750;
@@ -49,52 +51,72 @@ const Filters = () => {
   const [selectedEngine, setSelectedEngine] = React.useState([]);
 
   return (
-    <Drawer
-      anchor="left"
-      variant={isExtraLarge ? 'persistent' : 'temporary'}
-      open={isExtraLarge || drawerOpen}
-      onClose={() => setDrawerOpen(false)}
-    >
-      <Box sx={(theme) => ({ width: drawerWidth, p: 2, mt: theme.mixins.navbar.height })}>
-        <Typography variant="h4">Filtrai</Typography>
+    <>
+      <Button
+        color="primary"
+        variant="contained"
+        sx={{
+          position: 'fixed',
+          bottom: 25,
+          right: 25,
+          zIndex: 5,
+          height: 64,
+          width: 64,
+          borderRadius: '10%',
+          display: { xl: 'none', xxl: 'none' },
+        }}
+        onClick={() => setDrawerOpen(!drawerOpen)}
+      >
+        <TuneIcon sx={{ color: 'common.white', fontSize: '2rem' }} />
+      </Button>
 
-        <Divider sx={{ my: 2 }} />
+      <Drawer
+        anchor="left"
+        variant={isExtraLarge ? 'persistent' : 'temporary'}
+        open={isExtraLarge || drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+      >
+        <Box sx={(theme) => ({ width: drawerWidth, p: 2, mt: theme.mixins.navbar.height })}>
+          <Typography variant="h4">Filtrai</Typography>
 
-        <RangeField
-          label="Kaina"
-          value={priceRange}
-          onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
-          min={MIN}
-          max={MAX}
-        />
+          <Divider sx={{ my: 2 }} />
 
-        <Divider sx={{ my: 2 }} />
+          <RangeField
+            label="Kaina"
+            value={priceRange}
+            onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
+            min={MIN}
+            max={MAX}
+          />
 
-        <CheckboxGroup
-          label="Modeliai"
-          options={models}
-          value={selectedModel}
-          onChange={(_, newMaterialTypes) => setSelectedModels(newMaterialTypes)}
-        />
+          <Divider sx={{ my: 2 }} />
 
-        <Divider sx={{ my: 2 }} />
+          <CheckboxGroupField
+            label="Modeliai"
+            options={models}
+            value={selectedModel}
+            onChange={(_, newMaterialTypes) => setSelectedModels(newMaterialTypes)}
+          />
 
-        <CheckboxGroup
-          label="Variklis"
-          options={engines}
-          value={selectedEngine}
-          onChange={(_, newEngine) => setSelectedEngine(newEngine)}
-        />
+          <Divider sx={{ my: 2 }} />
 
-        <Divider sx={{ my: 2 }} />
+          <CheckboxGroupField
+            label="Variklis"
+            options={engines}
+            value={selectedEngine}
+            onChange={(_, newEngine) => setSelectedEngine(newEngine)}
+          />
 
-        <AutoSelectField
-          options={colors}
-          value={selectedColors}
-          onChange={(_, newColor) => setSelectedColors(newColor)}
-        />
-      </Box>
-    </Drawer>
+          <Divider sx={{ my: 2 }} />
+
+          <AutoSelectField
+            options={colors}
+            value={selectedColors}
+            onChange={(_, newColor) => setSelectedColors(newColor)}
+          />
+        </Box>
+      </Drawer>
+    </>
   );
 };
 

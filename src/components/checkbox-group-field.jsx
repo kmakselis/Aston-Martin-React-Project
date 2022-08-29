@@ -6,7 +6,7 @@ import {
   Checkbox,
 } from '@mui/material';
 
-const CheckboxGroup = ({
+const CheckboxGroupField = ({
   label: mainLabel,
   options,
   value: selectedOptions,
@@ -40,4 +40,4 @@ const CheckboxGroup = ({
   );
 };
 
-export default CheckboxGroup;
+export default CheckboxGroupField;
