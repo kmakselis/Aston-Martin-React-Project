@@ -41,25 +41,25 @@ const CarCard = ({
         width: '50%',
       }}
       >
-        <Box sx={{ m: 1 }}>
+        <Box sx={{ m: 2 }}>
           <Typography variant="subtitle" component="div">Variklis:</Typography>
         </Box>
-        <Box sx={{ m: 1 }}>
+        <Box sx={{ m: 2 }}>
           <Typography variant="subtitle" component="div">Spalva:</Typography>
         </Box>
-        <Box sx={{ m: 1 }}>
+        <Box sx={{ m: 2 }}>
           <Typography variant="subtitle" component="div">Pavarų dėžė:</Typography>
         </Box>
-        <Box sx={{ m: 1 }}>
+        <Box sx={{ m: 2 }}>
           <Typography variant="subtitle" component="div">Maksimalus greitis:</Typography>
         </Box>
-        <Box sx={{ m: 1 }}>
+        <Box sx={{ m: 2 }}>
           <Typography variant="subtitle" component="div">Galia:</Typography>
         </Box>
-        <Box sx={{ m: 1 }}>
+        <Box sx={{ m: 2 }}>
           <Typography variant="subtitle" component="div">0-100 km/h:</Typography>
         </Box>
-        <Box sx={{ m: 1 }}>
+        <Box sx={{ m: 2 }}>
           <Typography variant="subtitle" component="div">Kaina:</Typography>
         </Box>
 
@@ -68,31 +68,30 @@ const CarCard = ({
       <Box sx={{
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'left',
+        justifyContent: 'right',
         alignItems: 'left',
-        m: 1,
         width: '50%',
       }}
       >
-        <Box sx={{ fontWeight: 'bold', m: 1 }}>
+        <Box sx={{ fontWeight: 'bold', m: 2 }}>
           <Typography variant="subtitle" component="div">{engine}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 1 }}>
+        <Box sx={{ fontWeight: 'bold', m: 2 }}>
           <Typography variant="subtitle" component="div">{color}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 1 }}>
+        <Box sx={{ fontWeight: 'bold', m: 2 }}>
           <Typography variant="subtitle" component="div">{gearbox}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 1 }}>
+        <Box sx={{ fontWeight: 'bold', m: 2 }}>
           <Typography variant="subtitle" component="div">{maxSpeed}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 1 }}>
+        <Box sx={{ fontWeight: 'bold', m: 2 }}>
           <Typography variant="subtitle" component="div">{power}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 1 }}>
+        <Box sx={{ fontWeight: 'bold', m: 2 }}>
           <Typography variant="subtitle" component="div">{zeroToHundred}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 1 }}>
+        <Box sx={{ fontWeight: 'bold', m: 2 }}>
           <Typography variant="subtitle" component="div">{price}</Typography>
         </Box>
       </Box>

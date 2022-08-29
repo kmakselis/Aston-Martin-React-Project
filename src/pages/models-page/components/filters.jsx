@@ -1,20 +1,20 @@
 import React from 'react';
 import {
-  Autocomplete,
   Box,
   Button,
   Divider,
   Drawer,
-  FormControl,
-  Slider,
-  TextField,
   Typography,
   useMediaQuery,
 } from '@mui/material';
 import TuneIcon from '@mui/icons-material/Tune';
+import AutoSelectField from '../../../components/navbar/auto-select';
 import CheckboxGroup from '../../../components/checkbox-group';
+import RangeField from '../../../components/range-field';
 
 const drawerWidth = 280;
+const MIN = 154750;
+const MAX = 267948;
 
 const models = [
   { id: '1', label: 'DB11' },
@@ -45,7 +45,7 @@ const engines = [
 const Filters = () => {
   const isExtraLarge = useMediaQuery((theme) => theme.breakpoints.up('xl'));
   const [drawerOpen, setDrawerOpen] = React.useState(false);
-  const [priceRange, setPriceRange] = React.useState([154000, 267948]);
+  const [priceRange, setPriceRange] = React.useState([MIN, MAX]);
   const [selectedModel, setSelectedModels] = React.useState([]);
   const [selectedColors, setSelectedColors] = React.useState([]);
   const [selectedEngine, setSelectedEngine] = React.useState([]);
@@ -78,59 +78,41 @@ const Filters = () => {
       >
         <Box sx={(theme) => ({ width: drawerWidth, p: 2, mt: theme.mixins.navbar.height })}>
           <Typography variant="h4">Filtrai</Typography>
+
           <Divider sx={{ my: 2 }} />
-          <FormControl sx={{ width: '100%' }}>
-            <Typography variant="h6" sx={{}}>Kaina</Typography>
-            <Box sx={{ mx: 2 }}>
-              <Slider
-                value={priceRange}
-                min={154750}
-                max={267948}
-                // onChangeCommitted={(_, newPriceRange) => setPriceRange(newPriceRange)}
-                onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
-                valueLabelDisplay="on"
-                sx={{ mt: 4 }}
-              />
-            </Box>
-          </FormControl>
+
+          <RangeField
+            label="Kaina"
+            value={priceRange}
+            onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
+            min={MIN}
+            max={MAX}
+          />
+
           <Divider sx={{ my: 2 }} />
+
           <CheckboxGroup
             label="Modeliai"
             options={models}
             value={selectedModel}
             onChange={(_, newMaterialTypes) => setSelectedModels(newMaterialTypes)}
           />
+
           <Divider sx={{ my: 2 }} />
+
           <CheckboxGroup
             label="Variklis"
             options={engines}
             value={selectedEngine}
             onChange={(_, newEngine) => setSelectedEngine(newEngine)}
           />
+
           <Divider sx={{ my: 2 }} />
-          <Autocomplete
-            disablePortal
+
+          <AutoSelectField
             options={colors}
-            sx={{ width: '100%' }}
             value={selectedColors}
             onChange={(_, newColor) => setSelectedColors(newColor)}
-            renderInput={({
-              InputLabelProps,
-              InputProps,
-              inputProps,
-              fullWidth,
-              id,
-            }) => (
-              <TextField
-                label="Spalvos"
-                InputLabelProps={InputLabelProps}
-                InputProps={InputProps}
-                fullWidth={fullWidth}
-                id={id}
-              // eslint-disable-next-line react/jsx-no-duplicate-props
-                inputProps={inputProps}
-              />
-            )}
           />
         </Box>
       </Drawer>
