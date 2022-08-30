@@ -1,6 +1,6 @@
 const domain = process.env.REACT_APP_SERVER_ADDRESS;
 const collectionName = 'cars';
-// const relationsParams = '_expand=category&_expand=color&_expand=model&_expand=engine';
+const relationsParams = '_expand=category&_expand=color&_expand=model&_expand=engine';
 
 const formatCarOffer = ({
   id,
@@ -37,6 +37,13 @@ const fetchAllCars = async () => {
   return cars.map(formatCarOffer);
 };
 
+const fetchByCarId = async (id) => {
+  const response = await fetch(`${domain}/${collectionName}/${id}?${relationsParams}`);
+  const car = await response.json();
+
+  return car;
+};
+
 const createCarOffer = async (carProps) => {
   const response = await fetch(`${domain}/${collectionName}`, {
     method: 'POST',
@@ -51,13 +58,13 @@ const createCarOffer = async (carProps) => {
   return car;
 };
 
-const updateCarOffer = async (id, cupProps) => {
+const updateCarOffer = async (id, carProps) => {
   const response = await fetch(`${domain}/${collectionName}/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(cupProps),
+    body: JSON.stringify(carProps),
   });
 
   const cup = await response.json();
@@ -78,6 +85,7 @@ const CarService = {
   create: createCarOffer,
   update: updateCarOffer,
   remove: removeCarOffer,
+  fetchByCarId,
 };
 
 export default CarService;
