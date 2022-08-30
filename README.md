@@ -1,16 +1,16 @@
 # Aston Martin page
 
-## install dependecies
+## Install dependencies
 ```
 npm i
 ```
 
-## launch server
+## Launch server
 ```
 npm run server
 ```
 
-## launch client 
+## Launch client 
 ```
 npm run start
 ```

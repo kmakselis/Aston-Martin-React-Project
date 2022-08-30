@@ -1,5 +1,6 @@
 import React from 'react';
 import { Divider } from '@mui/material';
+import { useSearchParams } from 'react-router-dom';
 import {
   AutoSelectField,
   RangeField,
@@ -15,6 +16,7 @@ const MIN = 154750;
 const MAX = 267948;
 
 const Filters = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [models, setModels] = React.useState([]);
   const [engines, setEngines] = React.useState([]);
   const [colors, setColors] = React.useState([]);
