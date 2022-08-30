@@ -23,8 +23,28 @@ const Filters = () => {
 
   const [priceRange, setPriceRange] = React.useState([MIN, MAX]);
   const [selectedModel, setSelectedModels] = React.useState([]);
-  const [selectedColors, setSelectedColors] = React.useState([]);
   const [selectedEngine, setSelectedEngine] = React.useState([]);
+  const [selectedColors, setSelectedColors] = React.useState(null);
+
+  const handlePriceRangeChange = (_, newPriceRange) => {
+    const [min, max] = newPriceRange;
+    searchParams.set('price_gte', min);
+    searchParams.set('price_lte', max);
+    setSearchParams(searchParams);
+    setPriceRange(newPriceRange);
+  };
+
+  const handleColorChange = (_, newColors) => {
+    setSelectedColors(newColors);
+  };
+
+  const handleModelChange = (_, newMaterialTypes) => {
+    setSelectedModels(newMaterialTypes);
+  };
+
+  const handleEngineChange = (_, newEngines) => {
+    setSelectedEngine(newEngines);
+  };
 
   React.useEffect(() => {
     (async () => {
@@ -44,7 +64,7 @@ const Filters = () => {
       <RangeField
         label="Kaina"
         value={priceRange}
-        onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
+        onChange={handlePriceRangeChange}
         min={MIN}
         max={MAX}
       />
@@ -55,7 +75,7 @@ const Filters = () => {
         label="Modeliai"
         options={models}
         value={selectedModel}
-        onChange={(_, newMaterialTypes) => setSelectedModels(newMaterialTypes)}
+        onChange={handleModelChange}
       />
 
       <Divider sx={{ my: 2 }} />
@@ -64,7 +84,7 @@ const Filters = () => {
         label="Variklis"
         options={engines}
         value={selectedEngine}
-        onChange={(_, newEngine) => setSelectedEngine(newEngine)}
+        onChange={handleEngineChange}
       />
 
       <Divider sx={{ my: 2 }} />
@@ -72,7 +92,7 @@ const Filters = () => {
       <AutoSelectField
         options={colors}
         value={selectedColors}
-        onChange={(_, newColor) => setSelectedColors(newColor)}
+        onChange={handleColorChange}
       />
     </FilterDrawer>
   );
