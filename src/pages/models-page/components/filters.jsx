@@ -16,8 +16,8 @@ const MAX = 267948;
 
 const Filters = () => {
   const [models, setModels] = React.useState([]);
-  const [colors, setColors] = React.useState([]);
   const [engines, setEngines] = React.useState([]);
+  const [colors, setColors] = React.useState([]);
 
   const [priceRange, setPriceRange] = React.useState([MIN, MAX]);
   const [selectedModel, setSelectedModels] = React.useState([]);
@@ -32,8 +32,8 @@ const Filters = () => {
         EngineService.fetchAll(),
       ]);
       setModels(fetchedModels);
-      setColors(fetchedColors);
       setEngines(fetchedEngines);
+      setColors(fetchedColors);
     })();
   }, []);
 

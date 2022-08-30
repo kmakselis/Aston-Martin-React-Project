@@ -7,7 +7,7 @@ import {
   Button,
   MenuItem,
 } from '@mui/material';
-import CarService from '../../../services/car-service';
+import CategoryService from '../../../services/category-service';
 
 const CarForm = ({
   onSubmit,
@@ -46,7 +46,7 @@ const CarForm = ({
 
   React.useEffect(() => {
     (async () => {
-      const fethedCategories = await CarService.fetchCategories();
+      const fethedCategories = await CategoryService.fetchAll();
       setCategories(fethedCategories);
     })();
   }, []);
