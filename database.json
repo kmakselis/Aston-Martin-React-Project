@@ -34,7 +34,7 @@
     },
     {
       "id": "2DA75E93-DD46",
-      "model": "Aston Martin Vantage",
+      "model": "Aston Martin Vantage F1 Edition",
       "engine": "4.0 L V8 Twin Turbo",
       "color": "Golden Saffron",
       "gearbox": "Automatinė",
@@ -208,85 +208,85 @@
     }
   ],
   "models": [
-   {
-     "id": "1",
-     "label": "Aston Martin DB11"
-   },
-   {
-     "id": "2",
-     "label": "Aston Martin Vantage F1 Edition"
-   },
-   {
-     "id": "3",
-     "label": "Aston Martin Vantage"
-   },
-   {
-     "id": "4",
-     "label": "Aston Martin DBX"
-   },
-   {
-    "id": "5",
-    "label": "Aston Martin DBS"
-  },
-  {
-    "id": "6",
-    "label": "Aston Martin DBX707"
-  }
+    {
+      "id": "1",
+      "label": "Aston Martin DB11"
+    },
+    {
+      "id": "2",
+      "label": "Aston Martin Vantage F1 Edition"
+    },
+    {
+      "id": "3",
+      "label": "Aston Martin Vantage"
+    },
+    {
+      "id": "4",
+      "label": "Aston Martin DBX"
+    },
+    {
+      "id": "5",
+      "label": "Aston Martin DBS"
+    },
+    {
+      "id": "6",
+      "label": "Aston Martin DBX707"
+    }
   ],
   "colors": [
-   {
-     "id": "1",
-     "label": "Lunar White"
-   },
-   {
-     "id": "2",
-     "label": "Jet Black"
-   },
-   {
-     "id": "3",
-     "label": "Golden Saffron"
-   },
-   {
-     "id": "4",
-     "label": "China Gray"
-   },
-   {
-    "id": "5",
-    "label": "Onyx Black"
-   },
-   {
-     "id": "6",
-     "label": "Minotaur Green"
-   },
-   {
-     "id": "7",
-     "label": "Titanium Gray"
-   },
-   {
-     "id": "8",
-     "label": "Marine Blue"
-   },
-   {
-     "id": "9",
-     "label": "Contemporary"
-   },
-   {
-     "id": "10",
-     "label": "Contemporary Minotaur Green"
-   },
-   {
-     "id": "11",
-     "label": "Aston Martin Racing Green"
-   }
+    {
+      "id": "1",
+      "label": "Lunar White"
+    },
+    {
+      "id": "2",
+      "label": "Jet Black"
+    },
+    {
+      "id": "3",
+      "label": "Golden Saffron"
+    },
+    {
+      "id": "4",
+      "label": "China Gray"
+    },
+    {
+      "id": "5",
+      "label": "Onyx Black"
+    },
+    {
+      "id": "6",
+      "label": "Minotaur Green"
+    },
+    {
+      "id": "7",
+      "label": "Titanium Gray"
+    },
+    {
+      "id": "8",
+      "label": "Marine Blue"
+    },
+    {
+      "id": "9",
+      "label": "Contemporary"
+    },
+    {
+      "id": "10",
+      "label": "Contemporary Minotaur Green"
+    },
+    {
+      "id": "11",
+      "label": "Aston Martin Racing Green"
+    }
   ],
- "engines": [
-   {
-     "id": "1",
-     "label": "4.0 L V8 Twin Turbo"
-   },
-   {
-     "id": "2",
-     "label": "4.0 L V8 Twin Turbo + 65.0-kWh battery"
-   }
- ]
+  "engines": [
+    {
+      "id": "1",
+      "label": "4.0 L V8 Twin Turbo"
+    },
+    {
+      "id": "2",
+      "label": "4.0 L V8 Twin Turbo + 65.0-kWh battery"
+    }
+  ]
 }

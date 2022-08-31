@@ -25,7 +25,7 @@ const CarCard = ({
       <Image src={img} sx={{ position: 'absolute', top: 0, left: 0 }} />
     </Box>
     <Box sx={{ m: 2, display: 'flex', justifyContent: 'center' }}>
-      <Typography variant="h6" component="div">{model}</Typography>
+      <Typography variant="h5" component="div">{model}</Typography>
     </Box>
     <CardContent sx={{
       display: 'flex', justifyContent: 'center', height: '100%', flexGrow: 1,
@@ -37,29 +37,28 @@ const CarCard = ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'left',
-        m: 1,
         width: '50%',
       }}
       >
-        <Box sx={{ m: 2 }}>
+        <Box sx={{ height: '50px' }}>
           <Typography variant="subtitle" component="div">Variklis:</Typography>
         </Box>
-        <Box sx={{ m: 2 }}>
+        <Box sx={{ height: '50px' }}>
           <Typography variant="subtitle" component="div">Spalva:</Typography>
         </Box>
-        <Box sx={{ m: 2 }}>
+        <Box sx={{ height: '50px' }}>
           <Typography variant="subtitle" component="div">Pavarų dėžė:</Typography>
         </Box>
-        <Box sx={{ m: 2 }}>
+        <Box sx={{ height: '50px' }}>
           <Typography variant="subtitle" component="div">Maksimalus greitis:</Typography>
         </Box>
-        <Box sx={{ m: 2 }}>
+        <Box sx={{ height: '50px' }}>
           <Typography variant="subtitle" component="div">Galia:</Typography>
         </Box>
-        <Box sx={{ m: 2 }}>
+        <Box sx={{ height: '50px' }}>
           <Typography variant="subtitle" component="div">0-100 km/h:</Typography>
         </Box>
-        <Box sx={{ m: 2 }}>
+        <Box sx={{ height: '50px' }}>
           <Typography variant="subtitle" component="div">Kaina:</Typography>
         </Box>
 
@@ -73,25 +72,46 @@ const CarCard = ({
         width: '50%',
       }}
       >
-        <Box sx={{ fontWeight: 'bold', m: 2 }}>
+        <Box sx={{
+          fontWeight: 'bold', height: '50px',
+        }}
+        >
           <Typography variant="subtitle" component="div">{engine}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 2 }}>
+        <Box sx={{
+          fontWeight: 'bold', height: '50px',
+        }}
+        >
           <Typography variant="subtitle" component="div">{color}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 2 }}>
+        <Box sx={{
+          fontWeight: 'bold', height: '50px',
+        }}
+        >
           <Typography variant="subtitle" component="div">{gearbox}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 2 }}>
+        <Box sx={{
+          fontWeight: 'bold', height: '50px',
+        }}
+        >
           <Typography variant="subtitle" component="div">{maxSpeed}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 2 }}>
+        <Box sx={{
+          fontWeight: 'bold', height: '50px',
+        }}
+        >
           <Typography variant="subtitle" component="div">{power}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 2 }}>
+        <Box sx={{
+          fontWeight: 'bold', height: '50px',
+        }}
+        >
           <Typography variant="subtitle" component="div">{zeroToHundred}</Typography>
         </Box>
-        <Box sx={{ fontWeight: 'bold', m: 2 }}>
+        <Box sx={{
+          fontWeight: 'bold', height: '50px',
+        }}
+        >
           <Typography variant="subtitle" component="div">{price}</Typography>
         </Box>
       </Box>

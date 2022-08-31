@@ -28,22 +28,48 @@ const Filters = () => {
 
   const handlePriceRangeChange = (_, newPriceRange) => {
     const [min, max] = newPriceRange;
-    searchParams.set('price_gte', min);
-    searchParams.set('price_lte', max);
+    if (min === MIN) {
+      searchParams.delete('price_gte');
+    } else {
+      searchParams.set('price_gte', min);
+    }
+    if (max === MAX) {
+      searchParams.delete('price_lte');
+    } else {
+      searchParams.set('price_lte', max);
+    }
     setSearchParams(searchParams);
     setPriceRange(newPriceRange);
   };
 
-  const handleColorChange = (_, newColors) => {
-    setSelectedColors(newColors);
-  };
-
-  const handleModelChange = (_, newMaterialTypes) => {
-    setSelectedModels(newMaterialTypes);
+  const handleModelChange = (_, newModels) => {
+    const ids = newModels.map((model) => model.id);
+    searchParams.delete('modelId');
+    if (ids.length > 0) {
+      ids.forEach((id) => searchParams.append('modelId', id));
+    }
+    setSearchParams(searchParams);
+    setSelectedModels(newModels);
   };
 
   const handleEngineChange = (_, newEngines) => {
+    const ids = newEngines.map((engine) => engine.id);
+    searchParams.delete('engineId');
+    if (ids.length > 0) {
+      ids.forEach((id) => searchParams.append('engineId', id));
+    }
+    setSearchParams(searchParams);
     setSelectedEngine(newEngines);
+  };
+
+  const handleColorChange = (_, newColors) => {
+    if (newColors) {
+      searchParams.set('color', newColors.id);
+    } else {
+      searchParams.delete('color');
+    }
+    setSearchParams(searchParams);
+    setSelectedColors(newColors);
   };
 
   React.useEffect(() => {
