@@ -1,13 +1,12 @@
 import * as React from 'react';
 import {
   Box,
-  styled,
-  Typography,
   Button,
   LinearProgress,
+  styled,
+  Typography,
 } from '@mui/material';
 import Countup from 'react-countup';
-// import { className } from '@emotion/react';
 // import CartContext from '../contexts/cart-context';
 
 const Background = styled(Box)({
@@ -24,12 +23,12 @@ const ContentContainer = styled(Box)({
   position: 'absolute',
   top: 80,
   left: '5%',
-  height: '600px',
+  height: '100vh',
   width: '80%',
   order: 2,
   display: 'flex',
   justifyContent: 'flex-start',
-  alignItems: 'center',
+  alignItems: 'start',
 });
 
 const ParamsContainer = styled(Box)({
@@ -55,15 +54,6 @@ const ModelNames = styled(Box)(({ theme }) => ({
   gap: theme.spacing(6),
 }));
 
-/*
-Dizainas
-
-Pagal Modelių duomenis suformuoti mygtukus, ir nustayti  ANT UŽVEDIMO state kintamajį "activeCarID"
-
-Mygtuko iteravimo kode, tikrinti ar state kintamojo "activeCarID" sutampa
-su iteruojamo mygtuko/užrašo id, jei taip papildomai stilizuoti
-
-*/
 const MAX_SPEED = 400;
 const speedRatio = 100 / MAX_SPEED;
 const MAX_POWER = 700;
@@ -71,12 +61,19 @@ const powerRatio = 100 / MAX_POWER;
 const MAX_ACCELERATION = 5;
 const accelerationRatio = 100 / MAX_ACCELERATION;
 
+const myObjects = [
+  { id: 1, name: 'DB11' },
+  { id: 2, name: 'VANTAGE' },
+  { id: 3, name: 'DBX' },
+  { id: 4, name: 'DBS' },
+];
+
 const HomePage = () => {
   const [speed, setSpeed] = React.useState(367);
   const [power, setPower] = React.useState(510);
   const [acceleration, setAcceleration] = React.useState(2.8);
   const [bgImage, setbgImage] = React.useState('/db11.jpg');
-  // const [btnStyle, setBtnStyle] = React.useState('');
+  const [activeButtonState, setActiveButtonState] = React.useState(1);
 
   const DB11Progress = () => {
     setSpeed(367);
@@ -84,23 +81,40 @@ const HomePage = () => {
     setAcceleration(2.8);
     setbgImage('/db11.jpg');
   };
+
   const DBXProgress = () => {
     setSpeed(317);
     setPower(442);
     setAcceleration(4.8);
     setbgImage('/dbx.jpg');
   };
+
   const VantageProgress = () => {
     setSpeed(354);
     setPower(503);
     setAcceleration(3);
     setbgImage('/vantage.jpg');
   };
+
   const DBSProgress = () => {
     setSpeed(317);
     setPower(402);
     setAcceleration(3.5);
     setbgImage('/dbs.jpg');
+  };
+
+  const toggleActiveStyles = (index) => {
+    if (index === 0) {
+      DB11Progress();
+    } else if (index === 1) {
+      DBXProgress();
+    } else if (index === 2) {
+      VantageProgress();
+    } else if (index === 3) {
+      DBSProgress();
+    }
+
+    setActiveButtonState(index);
   };
 
   return (
@@ -110,45 +124,18 @@ const HomePage = () => {
 
         <ModelNames component="main">
 
-          <Button
-            variant="text"
-            sx={{
-              typography: 'h2', opacity: '0.5', lineHeight: '0.5em', color: '#fff',
-            }}
-            onClick={() => { DB11Progress(); }}
-          >
-            DB11
-          </Button>
-
-          <Button
-            variant="text"
-            sx={{
-              typography: 'h2', opacity: '0.5', lineHeight: '0.5em', color: '#fff',
-            }}
-            onClick={() => { VantageProgress(); }}
-          >
-            VANTAGE
-          </Button>
-
-          <Button
-            variant="text"
-            sx={{
-              typography: 'h2', opacity: '0.5', lineHeight: '0.5em', color: '#fff',
-            }}
-            onClick={() => { DBXProgress(); }}
-          >
-            DBX
-          </Button>
-
-          <Button
-            variant="text"
-            sx={{
-              typography: 'h2', opacity: '0.5', lineHeight: '0.5em', color: '#fff',
-            }}
-            onClick={() => { DBSProgress(); }}
-          >
-            DBS
-          </Button>
+          {myObjects.map((el, index) => (
+            <Button
+              variant="text"
+              key={el.id}
+              sx={{
+                typography: 'h1', opacity: activeButtonState === index ? '0.5' : '1', lineHeight: '0.5em', color: '#fff',
+              }}
+              onClick={() => { toggleActiveStyles(index); }}
+            >
+              {el.name}
+            </Button>
+          ))}
         </ModelNames>
 
         <ParamsContainer>
