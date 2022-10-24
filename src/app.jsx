@@ -3,14 +3,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import PageRoutes from './routes/page-routes';
-import { CartProvider } from './contexts/cart-context';
+// import { CarProvider } from './contexts/car-context';
 
 const App = () => (
   <LocalizationProvider dateAdapter={AdapterMoment}>
     <BrowserRouter>
-      <CartProvider>
-        <PageRoutes />
-      </CartProvider>
+      {/* <CarProvider> */}
+      <PageRoutes />
+      {/* </CarProvider> */}
     </BrowserRouter>
   </LocalizationProvider>
 );

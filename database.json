@@ -12,7 +12,7 @@
       "price": "190 796 €",
       "img": "https://i.imgur.com/g07oIWY.jpg",
 		  "categoryId": 1,
-      "modelId": "2",
+      "modelId": "1",
       "colorId": "1",
       "engineId": "1"
     },
@@ -27,7 +27,7 @@
       "zeroToHundred": "3,2 s",
       "price": "190 456 €",
       "img": "https://i.imgur.com/10HEpLT.jpg",
-      "modelId": "2",
+      "modelId": "1",
       "categoryId": "1",
       "colorId": "2",
       "engineId": "1"
@@ -171,7 +171,7 @@
       "zeroToHundred": "4,0 s",
       "price": "233 052 €",
       "img": "https://i.imgur.com/sm7xASc.jpg",
-      "modelId": "1",
+      "modelId": "2",
       "categoryId": "3",
       "colorId": "11",
       "engineId": "2"
@@ -187,7 +187,7 @@
       "zeroToHundred": "4,0 s",
       "price": "199 999 €",
       "img": "https://i.imgur.com/sm7xASc.jpg",
-      "modelId": "1",
+      "modelId": "2",
       "categoryId": "3",
       "colorId": "12",
       "engineId": "2"
@@ -210,11 +210,11 @@
   "models": [
     {
       "id": "1",
-      "label": "Aston Martin DB11"
+      "label": "Aston Martin Vantage F1 Edition"
     },
     {
       "id": "2",
-      "label": "Aston Martin Vantage F1 Edition"
+      "label": "Aston Martin DB11"
     },
     {
       "id": "3",

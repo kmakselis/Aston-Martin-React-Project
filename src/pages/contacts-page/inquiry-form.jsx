@@ -5,7 +5,6 @@ import {
   Typography,
   Button,
 } from '@mui/material';
-import SecurityIcon from '@mui/icons-material/Security';
 
 const InquiryForm = ({
   title,
@@ -15,13 +14,14 @@ const InquiryForm = ({
   children,
 }) => (
   <Paper
-    elevation={2}
+    elevation={10}
     sx={{
-      ml: '30%',
-      mr: '30%',
-      width: 400,
-      my: 4,
-      color: '#fff',
+      width: '100%',
+      height: 450,
+      color: '#222',
+      zIndex: 5,
+      mt: 5,
+      backgroundColor: 'rgba(255, 255, 255, 0)',
     }}
   >
     <Box
@@ -29,12 +29,10 @@ const InquiryForm = ({
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        gap: 4,
-        zIndex: 1000,
+        gap: 2,
       }}
       onSubmit={onSubmit}
     >
-      <SecurityIcon sx={{ fontSize: 50, color: 'primary' }} />
       <Typography component="h1" variant="h4">{title}</Typography>
       {children}
       <Button
