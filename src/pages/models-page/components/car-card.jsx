@@ -72,50 +72,30 @@ const CarCard = ({
         width: '50%',
       }}
       >
-        <Box sx={{
-          fontWeight: 'bold', height: '50px',
-        }}
-        >
+        <Box sx={{ fontWeight: 'bold', height: '50px' }}>
           <Typography variant="subtitle" component="div">{engine}</Typography>
         </Box>
-        <Box sx={{
-          fontWeight: 'bold', height: '50px',
-        }}
-        >
+        <Box sx={{ fontWeight: 'bold', height: '50px' }}>
           <Typography variant="subtitle" component="div">{color}</Typography>
         </Box>
-        <Box sx={{
-          fontWeight: 'bold', height: '50px',
-        }}
-        >
+        <Box sx={{ fontWeight: 'bold', height: '50px' }}>
           <Typography variant="subtitle" component="div">{gearbox}</Typography>
         </Box>
-        <Box sx={{
-          fontWeight: 'bold', height: '50px',
-        }}
-        >
+        <Box sx={{ fontWeight: 'bold', height: '50px' }}>
           <Typography variant="subtitle" component="div">{maxSpeed}</Typography>
         </Box>
-        <Box sx={{
-          fontWeight: 'bold', height: '50px',
-        }}
-        >
+        <Box sx={{ fontWeight: 'bold', height: '50px' }}>
           <Typography variant="subtitle" component="div">{power}</Typography>
         </Box>
-        <Box sx={{
-          fontWeight: 'bold', height: '50px',
-        }}
-        >
+        <Box sx={{ fontWeight: 'bold', height: '50px' }}>
           <Typography variant="subtitle" component="div">{zeroToHundred}</Typography>
         </Box>
-        <Box sx={{
-          fontWeight: 'bold', height: '50px',
-        }}
-        >
+        <Box sx={{ fontWeight: 'bold', height: '50px' }}>
           <Typography variant="subtitle" component="div">{price}</Typography>
         </Box>
       </Box>
     </CardContent>
+
     <CardActions sx={{ p: 2, alignSelf: 'center' }}>
       <Button
         size="large"

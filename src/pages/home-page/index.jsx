@@ -21,9 +21,9 @@ const Background = styled(Box)({
 
 const ContentContainer = styled(Box)({
   position: 'absolute',
-  top: 80,
+  top: 180,
   left: '5%',
-  height: '100vh',
+  height: '500px',
   width: '80%',
   order: 2,
   display: 'flex',
@@ -33,8 +33,7 @@ const ContentContainer = styled(Box)({
 
 const ParamsContainer = styled(Box)({
   position: 'absolute',
-  top: 50,
-  left: '50%',
+  left: '66%',
   height: '300px',
   width: '300px',
   order: 3,
@@ -73,7 +72,7 @@ const HomePage = () => {
   const [power, setPower] = React.useState(510);
   const [acceleration, setAcceleration] = React.useState(2.8);
   const [bgImage, setbgImage] = React.useState('/db11.jpg');
-  const [activeButtonState, setActiveButtonState] = React.useState(1);
+  const [activeButtonState, setActiveButtonState] = React.useState(0);
 
   const DB11Progress = () => {
     setSpeed(367);
@@ -107,9 +106,9 @@ const HomePage = () => {
     if (index === 0) {
       DB11Progress();
     } else if (index === 1) {
-      DBXProgress();
-    } else if (index === 2) {
       VantageProgress();
+    } else if (index === 2) {
+      DBXProgress();
     } else if (index === 3) {
       DBSProgress();
     }
@@ -129,7 +128,10 @@ const HomePage = () => {
               variant="text"
               key={el.id}
               sx={{
-                typography: 'h1', opacity: activeButtonState === index ? '0.5' : '1', lineHeight: '0.5em', color: '#fff',
+                typography: activeButtonState === index ? 'h1' : 'h2',
+                opacity: activeButtonState === index ? '1' : '0.5',
+                lineHeight: '2rem',
+                color: '#fff',
               }}
               onClick={() => { toggleActiveStyles(index); }}
             >
@@ -142,11 +144,11 @@ const HomePage = () => {
           <Typography
             variant="h6"
             component="h1"
-            sx={{ color: '#fff', lineHeight: '2em' }}
+            sx={{ color: '#fff', lineHeight: '1rem' }}
           >
             Maksimalus greitis
           </Typography>
-          <Box sx={{ color: '#fff', lineHeight: '2em' }}>
+          <Box sx={{ color: '#fff', lineHeight: '2rem' }}>
             <Countup start={0} end={speed} duration={0.4} suffix=" km/h" preserveValue />
           </Box>
           <Box sx={{ width: '100%', marginBottom: [3] }}>
@@ -160,7 +162,7 @@ const HomePage = () => {
           <Typography
             variant="h6"
             component="h1"
-            sx={{ color: '#fff', lineHeight: '2em' }}
+            sx={{ color: '#fff', lineHeight: '1rem' }}
           >
             Galia
           </Typography>
@@ -177,7 +179,7 @@ const HomePage = () => {
           <Typography
             variant="h6"
             component="h1"
-            sx={{ color: '#fff', lineHeight: '2em' }}
+            sx={{ color: '#fff', lineHeight: '1rem' }}
           >
             0-100km
           </Typography>

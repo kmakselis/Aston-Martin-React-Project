@@ -1,6 +1,7 @@
 const domain = process.env.REACT_APP_SERVER_ADDRESS;
 const collectionName = 'cars';
-const relationsParams = '_expand=category&_expand=color&_expand=model&_expand=engine';
+// const relationsParams = '_expand=category&_expand=color&_expand=model&_expand=engine';
+const relationsParams = '_expand=category';
 
 const formatCarOffer = ({
   id,
@@ -30,8 +31,10 @@ const formatCarOffer = ({
   categoryId,
 });
 
-const fetchAllCars = async () => {
-  const response = await fetch(`${domain}/${collectionName}?_expand=category`);
+const fetchAllCars = async (paramsString = null) => {
+  const urlParamsString = paramsString ? `&${paramsString}` : '';
+
+  const response = await fetch(`${domain}/${collectionName}?${relationsParams}${urlParamsString}`);
   const cars = await response.json();
 
   return cars.map(formatCarOffer);
@@ -44,10 +47,18 @@ const fetchByCarId = async (id) => {
   return car;
 };
 
+const fetchByIdArr = async (idArr) => {
+  const idsParamsString = idArr.map((id) => `id=${id}`).join('&');
+  const items = await fetchAllCars(idsParamsString);
+
+  return items;
+};
+
 const createCarOffer = async (carProps) => {
   const response = await fetch(`${domain}/${collectionName}`, {
     method: 'POST',
     headers: {
+      Accept: 'application/json',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(carProps),
@@ -58,13 +69,14 @@ const createCarOffer = async (carProps) => {
   return car;
 };
 
-const updateCarOffer = async (id, carProps) => {
+const updateCarOffer = async ({ id, ...updateProps }) => {
   const response = await fetch(`${domain}/${collectionName}/${id}`, {
     method: 'PATCH',
     headers: {
+      Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(carProps),
+    body: JSON.stringify(updateProps),
   });
 
   const cup = await response.json();
@@ -86,6 +98,7 @@ const CarService = {
   update: updateCarOffer,
   remove: removeCarOffer,
   fetchByCarId,
+  fetchByIdArr,
 };
 
 export default CarService;

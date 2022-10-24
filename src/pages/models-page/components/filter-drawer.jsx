@@ -9,7 +9,9 @@ import {
 } from '@mui/material';
 import TuneIcon from '@mui/icons-material/Tune';
 
-const FilterDrawer = ({ drawerWidth, children }) => {
+const drawerWidth = 280;
+
+const FilterDrawer = ({ children }) => {
   const isExtraLarge = useMediaQuery((theme) => theme.breakpoints.up('xl'));
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 

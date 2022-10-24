@@ -10,8 +10,9 @@ const RangeField = ({
   label,
   value,
   onChange,
-  min = 0,
-  max = 100000,
+  onChangeCommitted,
+  min = 154750,
+  max = 267948,
 }) => (
   <FormControl sx={{ width: '100%' }}>
     <Typography variant="h6">{label}</Typography>
@@ -20,7 +21,7 @@ const RangeField = ({
         value={value}
         min={min}
         max={max}
-        // onChangeCommitted={(_, newPriceRange) => setPriceRange(newPriceRange)}
+        onChangeCommitted={onChangeCommitted}
         onChange={onChange}
         valueLabelDisplay="on"
         sx={{ mt: 4 }}
